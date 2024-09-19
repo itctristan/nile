@@ -1,0 +1,16 @@
+{
+    "guacamoleVersion" : "*",
+    "name" : "geek2gether css",
+    "namespace" : "geek2gether",
+    "translations" : [ 
+        "translations/en.json"
+    ],    
+    "js" : [],
+    "css" : [
+        "css/geek2gether-css.css"
+    ],
+    "resources" : {
+        "images/geek2gether_logo.png" : "image/png",
+        "images/Nile SSO Login Background v2.png" : "image/png"  /* Add background image */
+    }
+}
