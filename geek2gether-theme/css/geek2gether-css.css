@@ -1,86 +1,114 @@
-/* enjoy */
+/* Layout designed to override default guacamole theme with Nile Secure 2024 Marketing colorway */
 
 body {
-    background-color: #fff;
-    background-image: url('app/ext/geek2gether/images/Nile SSO Login Background v2.png');
+    background-color: linear-gradient(135deg, #5A2C81, #1F2A44);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
 }
 
 div.login-ui {
-    background-color: white !important;
+    background-color: #fff !important;
+    background-image: url('app/ext/nile-theme/images/nile-sso-back.png') !important;
+    background-size: cover; /* Background will cover the entire screen */
+    background-position: center; /* Center the image on the screen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed on scroll */
 }
 
-.page-tabs .page-list li a[href].current {
-    background: #5A2C81 !important; /* Deep Purple */
+
+.page-tabs .page-list li a[href].current{
+    background: #5A2C81 !important; /*switched from vivid green to deep purple*/
     color: #FFFFFF !important;
 }
-
 /* menu page settings */
-.page-tabs .page-list li a[href]:hover {
-    background: #6457A6 !important; /* Light Purple/Blue */
+.page-tabs .page-list li a[href]:hover{
+    background: #6457A6 !important; /*switched from olive green to light purple-blue*/
     color: #FFFFFF !important;
 }
-
-.page-list-level li .menu-dropdown {
-    background: #3A4466 !important; /* Darker Blue */
+.page-list-level li .menu-dropdown{
+    background: #6a6b8c !important; /*switched out the olive green for blue-gray*/
 }
 
-.list-item:not(.selected) .caption:hover {
-    background: #e5e5cd !important;
-    border: solid 1px #CCCCCC !important;
+.list-item:not(.selected) .caption:hover{
+    background: #D1C7E0  !important; /*switched from pale cream to muted lavender*/ 
+    border:solid 1px #8C9CAD !important; /*switch light gray to medium gray*/
+}
+
+ag.ng-binding, ag.ng.binding.current,  ag.a.current, .section-tabs li a.current:hover {
+    background: rgba(209,199,224,0.3);
+    background-color: rgba(209,199,224,0.3);
+}
+
+.page-tabs .page-list li a[href]:hover, .section-tabs li a:hover {
+    background: rgba(209,199,224,0.3)
+    background-color: rgba(209,199,224,0.3)
 }
 
 .recent-connections .connection:hover {
-    background: #a3baab !important;
+    background: #8F9BB3 !important; /*switched from A3BAAB (sage) to cool gray */
 }
-
-.user-menu {
+.user-menu{
     background: #fff !important;
     color: #000000 !important;    
 }
-
-.user-menu:hover {
-    background: #5A2C81 !important; /* Deep Purple */
-    color: #ffffff !important;    
+.user-menu:hover{
+    background: #D1C7E0 !important; /*switched from vivid green to deep purple*/
+    color: #000000 !important;    
+}
+.menu-dropdown .ng-isolate-scope .open{
+    background: #B0ABC4 !important; /*switched from green-gray to muted lavender*/
 }
 
-.menu-dropdown .ng-isolate-scope .open {
-    background: #3A4466 !important; /* Darker Blue */
+.menu-dropdown .menu-contents li a:hover {
+    background-color: #D1C7E0;
 }
 
 .header {
-    background: #10101A !important; /* Very Dark Blue */
+    background: #000 !important;
     color: #fff !important;
 }
 
 .list-item .name {
-    color: #5A2C81; /* Deep Purple */
+    color: #6457A6; /*muted purple*/
     font-weight: 400;
     padding: 0.1em;
     margin-left: 0.25em;
 }
 
 a.button, button, input[type=submit] {
-    background-color: #5A2C81; /* Deep Purple */
-    color: #FFFFFF;
+    background-color: #5A2C81; /*Deep Purple*/
 }
 
 .login-ui .login-dialog .logo {
     display: block;
     margin: 0.5em auto;
-    width: 3em;
+    width: 10em;
     height: 3em;
-    background-size: 3em 3em;
-    background-image: url(app/ext/geek2gether/images/geek2gether_logo.png);
+    background-size: 5em 3em;
+    -moz-background-size: 5em 3em;
+    -webkit-background-size: 5em 3em;
+    -khtml-background-size: 5em 3em;
+    background-image: url(app/ext/nile-theme/images/geek2gether_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
+/*default black login box
 .login-ui .login-dialog {
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent dark */
+    background-color: black;
     max-width: 5in;
-    border: solid 5px #10101A; /* Very Dark Blue */
+    border: solid 5px black;    
+}
+*/
+/* Login UI box design */
+.login-ui .login-dialog {
+    background-color: #1F2A44; /* Deep blue background for contrast */
+    max-width: 5in;
+    border: solid 5px #5A2C81; /* Deep purple border */
+    border-radius: 10px; /* Rounded corners for modern look */
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    color: #FFFFFF; /* White text for readability */
+    text-align: center; /* Center text inside the dialog */
 }
 
 .login-ui .login-dialog .version .app-name {
@@ -89,10 +117,11 @@ a.button, button, input[type=submit] {
     text-align: center;
     font-size: 1.05em;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 /* login page error */
+
 .login-ui.error p.login-error {
     display: block;
     position: fixed;
@@ -101,38 +130,40 @@ a.button, button, input[type=submit] {
     top: 0;
     padding: 1em;
     margin: 0.2em;
-    background: #f14141;
-    border: 1px solid #9d5b5b;
-    border-radius: 0.25em;
+    background: #B0A8C4; /*switched from red to muted purple*/
+    border: 1px solid #8C9CAD; /*switched from bright red to muted purple*/
+    -moz-border-radius: .25em;
+    -webkit-border-radius: 0.25em;
+    -khtml-border-radius: .25em;
     text-align: center;
     color: #000;
 }
 
-input[name="username"], input[name="password"], input[name="guac-totp"], input[ng-model="searchString"] {
-    background-color: #fff !important;
+input[name="username"],input[name="password"],input[name="guac-totp"],input[ng-model="searchString"]{
+    background-color: #fff !important; /*white background*/
 }
 
 /* the login page header called "navigation" */
+
 .navigation {
-    background: #10101A !important; /* Very Dark Blue */
+    background: black !important;
     color: #fff !important;
 }
 
 .navigation a:hover {
-    background-color: #5A2C81; /* Deep Purple */
-    color: white;
+  background-color: #6457A6;
+  color: black;
 }
 
 .navigation a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    line-height: 25px;
-    border-radius: 4px;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 4px;
 }
-
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -140,8 +171,14 @@ input[name="username"], input[name="password"], input[name="guac-totp"], input[n
     height: inherit;
     max-width: unset;
     float: right;
+}
+
+.navigation{
     padding-left: 88px;
     padding-right: 88px;
+}
+
+.navigation {
     position: fixed;
     left: 0;
     top: 0;
@@ -149,15 +186,145 @@ input[name="username"], input[name="password"], input[name="guac-totp"], input[n
     z-index: 100;
     width: 100%;
     height: 64px;
-    background: #1b74da; /* Existing blue, feel free to adjust */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+    background: #1b74da;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
 }
 
-/* Add logo on the upper left */
-.hlogo {
-    width: 145px;
-    height: 60px;
-    background: black url(app/ext/geek2gether/images/geek2gether_logo.png) no-repeat left/142px;
-    font-size: 0;
-    line-height: 0;
+ /*
+ * Sets up the custom coloring around the header elements.
+ */
+.header {
+    border-bottom: 1px solid rgba(28,28,28,1.0); /* Dark gray border */
+    box-shadow: rgba(28,28,28,0.75); /* Dark gray shadow */
+    background: rgba(28,28,28,1.0); /* Dark gray background */
+    color: rgba(255,255,255,1.0); /* White text */
+}
+
+ /*
+ * Changes the default color and fonts of the submit buttons, along with font
+ * size and weight.
+ */
+input[type="submit"], button, a.button {
+    background-color: rgba(90,44,129,1.0); /* Deep purple for buttons */
+    border: 1px solid rgba(31,42,68,1.0); /* Deep blue border */
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Raleway, FreeSans, Helvetica, Arial, sans-serif;
+}
+
+ /*
+ * Changes the coloring on the submit-styled buttons when you hover over them.
+ */
+input[type="submit"]:hover, button:hover, a.button:hover {
+    background-color: rgba(31,42,68,1.0); /* Deep blue hover */
+    border: 1px solid rgba(90,44,129,1.0); /* Deep purple border */
+}
+
+ /*
+ * Changes the coloring on the submit-styled buttons when you click on them.
+ */
+input[type="submit"]:active, button:active, a.button:active {
+    background-color: rgba(31,42,68,1.0); /* Deep blue active state */
+    border: 1px solid rgba(255,95,0,1.0); /* Accent orange border for click */
+}
+
+ /*
+ * Provide a custom color scheme for danger-styled buttons.
+ */
+button.danger, a.button.danger {
+    background: rgba(255,95,0,1.0); /* Orange background */
+    border: 1px solid rgba(255,0,0,1.0); /* Red border */
+}
+
+/*
+ * Provide a custom color scheme for hovering over danger-styled buttons.
+ */
+button.danger:hover, a.button.danger:hover {
+    background: rgba(255,0,0,0.75); /* Semi-transparent red hover */
+    border: 1px solid rgba(255,95,0,1.0); /* Orange border */
+}
+
+/*
+ * Provide a custom color scheme for danger-styled buttons when clicked.
+ */
+button.danger:active, a.button.danger:active {
+    background: rgba(255,0,170,1.0); /* Hot pink active state */
+    border: 1px solid rgba(255,95,0,1.0); /* Orange border */
+}
+
+/*
+ * Change the default font order of preference across the entire interface.
+ */
+body {
+    font-family: Raleway, FreeSans, Helvetica, Arial, sans-serif;
+}
+
+
+ /*
+ * Sets up the custom coloring around the header elements.
+ */
+.header {
+    border-bottom: 1px solid rgba(28,28,28,1.0); /* Dark gray border */
+    box-shadow: rgba(28,28,28,0.75); /* Dark gray shadow */
+    background: rgba(28,28,28,1.0); /* Dark gray background */
+    color: rgba(255,255,255,1.0); /* White text */
+}
+
+/*
+ * Changes the default color and fonts of the submit buttons, along with font
+ * size and weight.
+ */
+input[type="submit"], button, a.button {
+    background-color: rgba(90,44,129,1.0); /* Deep purple for buttons */
+    border: 1px solid rgba(31,42,68,1.0); /* Deep blue border */
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Raleway, FreeSans, Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Changes the coloring on the submit-styled buttons when you hover over them.
+ */
+input[type="submit"]:hover, button:hover, a.button:hover {
+    background-color: rgba(31,42,68,1.0); /* Deep blue hover */
+    border: 1px solid rgba(90,44,129,1.0); /* Deep purple border */
+}
+
+/*
+ * Changes the coloring on the submit-styled buttons when you click on them.
+ */
+input[type="submit"]:active, button:active, a.button:active {
+    background-color: rgba(31,42,68,1.0); /* Deep blue active state */
+    border: 1px solid rgba(255,95,0,1.0); /* Accent orange border for click */
+}
+
+/*
+ * Provide a custom color scheme for danger-styled buttons.
+ */
+button.danger, a.button.danger {
+    background: rgba(255,95,0,1.0); /* Orange background */
+    border: 1px solid rgba(255,0,0,1.0); /* Red border */
+}
+
+/*
+ * Provide a custom color scheme for hovering over danger-styled buttons.
+ */
+button.danger:hover, a.button.danger:hover {
+    background: rgba(255,0,0,0.75); /* Semi-transparent red hover */
+    border: 1px solid rgba(255,95,0,1.0); /* Orange border */
+}
+
+/*
+ * Provide a custom color scheme for danger-styled buttons when clicked.
+ */
+button.danger:active, a.button.danger:active {
+    background: rgba(255,0,170,1.0); /* Hot pink active state */
+    border: 1px solid rgba(255,95,0,1.0); /* Orange border */
+}
+
+/*
+ * Change the default font order of preference across the entire interface.
+ */
+body {
+    font-family: Raleway, FreeSans, Helvetica, Arial, sans-serif;
 }
